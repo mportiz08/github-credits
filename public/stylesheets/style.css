@@ -34,7 +34,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html, body {
   background-color: #e7e7e7;
   color: #333;
-  font-family: "Helvetica Neue", helvetica, sans-serif;
+  font-family: "Arvo", "Helvetica Neue", helvetica, sans-serif;
   height: 100%;
 }
 
@@ -48,23 +48,20 @@ a:hover {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 32px;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: normal;
+  font-size: 24px;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: normal;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 18px;
-  font-weight: normal;
+  font-size: 16px;
 }
 
 li {
@@ -82,5 +79,5 @@ p {
   text-align: center;
   min-height: 500px;
   background-color: #fff;
-  -moz-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5);
 }
