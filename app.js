@@ -31,7 +31,18 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
-      title: 'spaz'
+      title: 'Github Credits'
+    }
+  });
+});
+
+app.get('/:author/:project', function(req, res) {
+  res.render('project', {
+    locals: {
+      title: req.params.project,
+      author: req.params.author,
+      project: req.params.project,
+      descr: 'by ' + req.params.author
     }
   });
 });

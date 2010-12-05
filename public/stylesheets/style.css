@@ -31,10 +31,15 @@ del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; }
 /*******************************************************************************************/
 /*******************************************************************************************/
+@font-face {
+  font-family: League Gothic;
+  src: local(league_gothic), url('/fonts/league_gothic.otf') format('opentype');
+}
+
 html, body {
-  background-color: #e7e7e7;
+  background-color: #333;
   color: #333;
-  font-family: "Arvo", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
   height: 100%;
 }
 
@@ -48,8 +53,7 @@ a:hover {
 }
 
 h1 {
-  font-size: 32px;
-  font-weight: normal;
+  font-size: 36px;
 }
 
 h2 {
@@ -73,11 +77,63 @@ p {
   padding: 0 25px;
 }
 
-#container {
-  width: 480px;
-  margin: 0 auto;
+.rounded {
+  width: 750px;
+  margin: 15px auto 0 auto;
+  padding: 25px;
+  background-color: #e7e7e7;
+  /*box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5), -6px -6px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5), -6px -6px 6px rgba(0, 0, 0, 0.5);*/
+  -moz-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5)/*, -6px -6px 6px rgba(0, 0, 0, 0.5)*/;
+  border-radius: 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 6px;
+}
+
+.description {
+  color: #545454;
+}
+
+.avatar {
+  float: left;
+}
+
+.avatar img {
+  border: 3px solid #333;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+
+.user-info {
+  float: right;
+  text-align: right;
+}
+
+.user-info p {padding-right: 0px;}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#header {
   text-align: center;
-  min-height: 500px;
-  background-color: #fff;
-  -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+h1#title {
+  font-family: League Gothic;
+  font-size: 72px;
+  font-weight: normal;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #222;
+}
+
+#welcome {
+  text-align: center;
+}
+
+#welcome p {
+  padding: 50px;
 }
