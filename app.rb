@@ -12,11 +12,8 @@ module App
   end
 
   get '/:author/:project' do
-    info = Project.info(params[:author], params[:project])
-    @title = info["name"]
-    @author = info["owner"]
-    @project = info["name"]
-    @descr = info["description"]
+    @project = Project.from(params[:author], params[:project])
+    @title = "#{@project.name} by #{@project.owner}"
     haml :project
   end
 end
