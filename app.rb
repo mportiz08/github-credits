@@ -13,6 +13,7 @@ module App
 
   get '/:author/:project' do
     @project = Project.from(params[:author], params[:project])
+    @contributors = @project.contributors
     @title = "#{@project.name} by #{@project.owner}"
     haml :project
   end
