@@ -1,17 +1,22 @@
 require 'sinatra'
 require 'haml'
+require 'lib/github'
 
-set :haml, :format => :html5
+module App
+  include Github
+  set :haml, :format => :html5
 
-get '/' do
-  @title = 'Github Credits'
-  haml :index
-end
+  get '/' do
+    @title = 'Github Credits'
+    haml :index
+  end
 
-get '/:author/:project' do
-  @title = params[:project]
-  @author = params[:author]
-  @project = params[:project]
-  @descr = "by #{params[:author]}"
-  haml :project
+  get '/:author/:project' do
+    info = Project.info(params[:author], params[:project])
+    @title = info["name"]
+    @author = info["owner"]
+    @project = info["name"]
+    @descr = info["description"]
+    haml :project
+  end
 end
