@@ -31,11 +31,6 @@ del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; }
 /*******************************************************************************************/
 /*******************************************************************************************/
-@font-face {
-  font-family: League Gothic;
-  src: local(league_gothic), url('/fonts/league_gothic.otf') format('opentype');
-}
-
 html, body {
   background-color: #333;
   color: #333;
@@ -82,8 +77,6 @@ p {
   margin: 15px auto 0 auto;
   padding: 25px;
   background-color: #e7e7e7;
-  /*box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5), -6px -6px 6px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5), -6px -6px 6px rgba(0, 0, 0, 0.5);*/
   -moz-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5)/*, -6px -6px 6px rgba(0, 0, 0, 0.5)*/;
   border-radius: 6px;
   -webkit-border-radius: 4px;
@@ -118,19 +111,18 @@ p {
   overflow: hidden;
 }
 
-#header {
+#header, .pagination {
   text-align: center;
+  border: 8px solid #222;
 }
 
-h1#title {
-  font-family: League Gothic;
-  font-size: 72px;
-  font-weight: normal;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+#header h1 {
+  font-size: 56px;
+  text-shadow: 0 2px 4px rgba(34, 34, 34, 0.5);
   color: #222;
 }
 
-#welcome {
+#welcome, .pagination {
   text-align: center;
 }
 

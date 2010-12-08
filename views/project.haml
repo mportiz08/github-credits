@@ -1,5 +1,5 @@
 #header.rounded
-  %h1#title
+  %h1
     = @project.name
   %p.description
     = @project.description
@@ -21,3 +21,7 @@
         %p
           = c.company
       .clear
+  - if @contributors.current_page < @contributors.total_pages
+    %li.rounded.pagination
+      %h2
+        %a{:href => @url } more
