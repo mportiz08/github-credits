@@ -17,6 +17,8 @@ module Github
       c_info.each do |user|
         @contributors << Contributor.new(user)
       end
+      # visual hack until i figure out how to limit the api response
+      @contributors = @contributors.slice(0, 10)
     end
     
     def self.from(author, name)
