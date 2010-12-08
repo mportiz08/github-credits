@@ -17,7 +17,8 @@
           = "#{c.commits} commits"
         %p &nbsp;
         %p
-          = c.url
+          %a{:href => c.url, :target => "_blank"}
+            = c.url
         %p
           = c.company
       .clear
