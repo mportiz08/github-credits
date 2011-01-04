@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'bundler/setup'
+#require 'bundler/setup'
 require 'sinatra'
 require 'haml'
 require 'will_paginate'
@@ -21,7 +21,7 @@ module App
   end
   
   get '/about' do
-    redirect 'mportiz08/github-credits'
+    redirect '/mportiz08/github-credits'
   end
 
   get '/:author/:project' do
