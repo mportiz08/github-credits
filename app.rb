@@ -11,6 +11,12 @@ module App
     @title = 'Github Credits'
     haml :index
   end
+  
+  get '/search' do
+    query = params[:q].split('/')
+    author, project = query[0], query[1]
+    redirect "/#{author}/#{project}"
+  end
 
   get '/:author/:project' do
     page = params[:page] || "1"
