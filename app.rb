@@ -17,6 +17,10 @@ module App
     author, project = query[0], query[1]
     redirect "/#{author}/#{project}"
   end
+  
+  get '/about' do
+    redirect 'mportiz08/github-credits'
+  end
 
   get '/:author/:project' do
     page = params[:page] || "1"

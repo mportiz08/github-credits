@@ -5,6 +5,12 @@
     %title
       = @title
     %link{:rel => 'stylesheet', :href => '/stylesheets/style.css'}
-    script{type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"}
+    %script{type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"}
   %body
-    = yield
+    #container
+      .nav
+        %a{:href => '/'} home
+        |
+        %a{:href => '/about'} about
+      .clear
+      = yield
