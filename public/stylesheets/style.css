@@ -77,7 +77,9 @@ p {
   margin: 15px auto 0 auto;
   padding: 25px;
   background-color: #e7e7e7;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
